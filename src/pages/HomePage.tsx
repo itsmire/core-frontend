@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, ShieldCheck, Zap, RefreshCw, CreditCard, ArrowRight, Sparkles, Star, ShoppingBag, Laptop, Smartphone, Headphones, Home, Gamepad2 } from 'lucide-react';
+import { Cpu, ShieldCheck, Zap, RefreshCw, CreditCard, ArrowRight, Sparkles, Star, ShoppingBag, Laptop, Smartphone, Headphones, Home, Gamepad2, ChevronRight } from 'lucide-react';
 import { useProducts } from '@/features/product/hooks/useProducts';
 import { useCategories } from '@/features/product/hooks/useCategories';
 import ProductGrid from '@/features/product/components/ProductGrid';
