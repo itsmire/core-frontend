@@ -15,12 +15,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
 
-    /* Vibrant Orange */
-    --primary: #FF6B35;
+    /* Premium Cyan/Sky Tech Blue */
+    --primary: #0ea5e9;
     --primary-foreground: #ffffff;
 
-    /* Navy Blue */
-    --secondary: #0A2540;
+    /* Deep Slate Tech Grey */
+    --secondary: #0f172a;
     --secondary-foreground: #ffffff;
 
     --muted: 210 40% 98%;
@@ -34,7 +34,7 @@
 
     --border: 214.3 31.8% 94%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 24.6 95% 53.1%;
+    --ring: 200.5 95% 53.1%;
 
     --radius: 0.75rem;
   }
@@ -49,10 +49,10 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: #FF6B35;
-    --primary-foreground: #ffffff;
+    --primary: #38bdf8;
+    --primary-foreground: #0f172a;
 
-    --secondary: #0A2540;
+    --secondary: #1e293b;
     --secondary-foreground: #ffffff;
 
     --muted: 217.2 32.6% 17.5%;
@@ -66,7 +66,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 200.5 95% 53.1%;
   }
 }
 

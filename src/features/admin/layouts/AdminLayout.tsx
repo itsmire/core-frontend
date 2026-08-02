@@ -71,7 +71,7 @@ export default function AdminLayout() {
             letterSpacing: 1,
           }}
         >
-          {collapsed ? 'Z' : 'ZORA Admin'}
+          {collapsed ? 'C' : 'CORE Admin'}
         </div>
         <Menu
           theme="dark"

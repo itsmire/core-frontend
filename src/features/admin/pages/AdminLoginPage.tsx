@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
     >
       <Card style={{ width: 380, boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
         <div style={{ textAlign: 'center', marginBottom: 24 }}>
-          <Title level={3} style={{ margin: 0 }}>ZORA Admin</Title>
+          <Title level={3} style={{ margin: 0 }}>CORE Admin</Title>
           <Text type="secondary">Đăng nhập quản trị viên</Text>
         </div>
 

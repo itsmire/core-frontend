@@ -82,11 +82,11 @@ export default function SellerLayout() {
         <div className="h-14 flex items-center px-4 border-b border-gray-200 shrink-0">
           {sidebarOpen ? (
             <div className="flex flex-col leading-tight">
-              <span className="text-base font-bold text-orange-500 tracking-tight">ZORA</span>
+              <span className="text-base font-bold text-primary tracking-tight">CORE</span>
               <span className="text-[10px] text-gray-400 font-medium">Kênh Người Bán</span>
             </div>
           ) : (
-            <span className="text-base font-bold text-orange-500 mx-auto">Z</span>
+            <span className="text-base font-bold text-primary mx-auto">C</span>
           )}
         </div>
 

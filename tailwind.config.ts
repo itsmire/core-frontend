@@ -24,12 +24,24 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "var(--primary)", // Vibrant Orange
+          DEFAULT: "var(--primary)", // Premium Sky Blue
           foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "var(--secondary)", // Navy Blue
+          DEFAULT: "var(--secondary)", // Deep Slate Tech Grey
           foreground: "var(--secondary-foreground)",
+        },
+        orange: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
         },
         navy: {
           50: '#f0f4f8',

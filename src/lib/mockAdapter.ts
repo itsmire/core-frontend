@@ -3,11 +3,11 @@ import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 // Dữ liệu ban đầu
 const INITIAL_CATEGORIES = [
-  { id: 'cat_01', name: 'Laptops & Computers', created_at: new Date().toISOString() },
-  { id: 'cat_02', name: 'Smartphones & Tablets', created_at: new Date().toISOString() },
-  { id: 'cat_03', name: 'Audio & Wearables', created_at: new Date().toISOString() },
-  { id: 'cat_04', name: 'Smart Home Devices', created_at: new Date().toISOString() },
-  { id: 'cat_05', name: 'Gaming Gear & Accessories', created_at: new Date().toISOString() }
+  { id: 'cat_01', name: 'Laptops & Computers', imageUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=150', created_at: new Date().toISOString() },
+  { id: 'cat_02', name: 'Smartphones & Tablets', imageUrl: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=150', created_at: new Date().toISOString() },
+  { id: 'cat_03', name: 'Audio & Wearables', imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=150', created_at: new Date().toISOString() },
+  { id: 'cat_04', name: 'Smart Home Devices', imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=150', created_at: new Date().toISOString() },
+  { id: 'cat_05', name: 'Gaming Gear & Accessories', imageUrl: 'https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?w=150', created_at: new Date().toISOString() }
 ];
 
 const INITIAL_PRODUCTS = [
@@ -168,9 +168,10 @@ const INITIAL_ADDRESSES = [
 
 // Helper lưu/lấy LocalStorage
 const getStorage = <T>(key: string, initial: T): T => {
-  const val = localStorage.getItem(key);
+  const coreKey = key + '_core';
+  const val = localStorage.getItem(coreKey);
   if (!val) {
-    localStorage.setItem(key, JSON.stringify(initial));
+    localStorage.setItem(coreKey, JSON.stringify(initial));
     return initial;
   }
   try {
@@ -181,7 +182,7 @@ const getStorage = <T>(key: string, initial: T): T => {
 };
 
 const setStorage = <T>(key: string, data: T): void => {
-  localStorage.setItem(key, JSON.stringify(data));
+  localStorage.setItem(key + '_core', JSON.stringify(data));
 };
 
 export default function mockAdapter(config: AxiosRequestConfig): Promise<AxiosResponse> {
