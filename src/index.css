@@ -6,75 +6,159 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card: 240 10% 5.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Premium Indigo Tech Color */
-    --primary: #6366f1;
+    /* Cyberpunk Purple Neon */
+    --primary: #a855f7;
     --primary-foreground: #ffffff;
 
-    /* Deep Slate Tech Grey */
-    --secondary: #0f172a;
-    --secondary-foreground: #ffffff;
+    /* Cyberpunk Cyan Neon */
+    --secondary: #06b6d4;
+    --secondary-foreground: #09090b;
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 94%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 243.4 95% 53.1%;
-
-    --radius: 0.75rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: #818cf8;
-    --primary-foreground: #0f172a;
-
-    --secondary: #1e293b;
-    --secondary-foreground: #ffffff;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 243.4 95% 53.1%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 270 91.2% 59.8%;
+
+    --radius: 1rem;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground font-sans antialiased selection:bg-orange-500/30;
-  }
+/* Cyberpunk Neon Global Dark Theme Overrides */
+body {
+  background-color: #09090b !important;
+  color: #f4f4f5 !important;
+  font-family: 'Inter', sans-serif;
+  selection-background-color: rgba(168, 85, 247, 0.3);
+}
+
+#root {
+  background-color: #09090b !important;
+  min-height: 100vh;
+}
+
+/* Force dark card backgrounds on all bright-white layout parts */
+.bg-white, .bg-card {
+  background-color: #121214 !important;
+}
+
+/* Adjust light-gray background containers to carbon-dark */
+.bg-gray-50, .bg-gray-100, .bg-[#FAFAFA], .bg-[#F4F5F7], .bg-gray-50\/40, .bg-gray-50\/50, .bg-gray-50\/60 {
+  background-color: #09090b !important;
+}
+
+/* Adjust text colors to high contrast white/gray */
+.text-gray-900, .text-gray-800, .text-secondary, .text-secondary\/80, .text-secondary\/90, .text-gray-750 {
+  color: #fafafa !important;
+}
+
+.text-gray-700, .text-gray-600 {
+  color: #d4d4d8 !important;
+}
+
+.text-gray-500, .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Borders and Dividers */
+.border-gray-50, .border-gray-100, .border-gray-200, .border-gray-300, .border-border, .border-gray-100\/50 {
+  border-color: #27272a !important; /* Zinc 800 */
+}
+
+/* Inputs, Select, Textareas */
+input, select, textarea {
+  background-color: #09090b !important;
+  color: #fafafa !important;
+  border-color: #27272a !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #a855f7 !important;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4) !important;
+}
+
+/* Header & Footer Styling */
+header.bg-white, footer.bg-white {
+  background-color: #09090b !important;
+  border-bottom: 1px solid #27272a !important;
+}
+
+footer {
+  background-color: #09090b !important;
+  border-top: 1px solid #27272a !important;
+}
+
+/* Special hover enhancements with glowing neon violet shadows */
+.hover\:shadow-minimal-hover:hover, 
+.group:hover .group-hover\:shadow-minimal-hover,
+.hover\:shadow-lg:hover {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.15) !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+/* Antd Components Dark Mode overrides */
+.ant-modal-content {
+  background-color: #121214 !important;
+  color: #fafafa !important;
+  border: 1px solid #27272a !important;
+}
+.ant-modal-header {
+  background-color: #121214 !important;
+  border-bottom: 1px solid #27272a !important;
+}
+.ant-modal-title {
+  color: #fafafa !important;
+}
+.ant-modal-close-icon {
+  color: #a1a1aa !important;
+}
+.ant-modal-close-icon:hover {
+  color: #a855f7 !important;
+}
+.ant-card {
+  background-color: #121214 !important;
+  border-color: #27272a !important;
+  color: #fafafa !important;
+}
+.ant-card-head {
+  border-bottom-color: #27272a !important;
+  color: #fafafa !important;
+}
+.ant-table {
+  background-color: #121214 !important;
+  color: #fafafa !important;
+}
+.ant-table-thead > tr > th {
+  background-color: #18181b !important;
+  color: #fafafa !important;
+  border-bottom-color: #27272a !important;
+}
+.ant-table-tbody > tr > td {
+  border-bottom-color: #27272a !important;
+}
+.ant-table-row:hover > td {
+  background-color: #1c1c1f !important;
+}
+.ant-pagination-item-active {
+  border-color: #a855f7 !important;
+  background-color: #121214 !important;
+}
+.ant-pagination-item-active a {
+  color: #a855f7 !important;
 }
