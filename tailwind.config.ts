@@ -32,16 +32,16 @@ export default {
           foreground: "var(--secondary-foreground)",
         },
         orange: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c084fc',
-          400: '#a78bfa',
-          500: '#6366f1', // Indigo 500
-          600: '#4f46e5', // Indigo 600
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
+          50: '#fafafa',
+          100: '#f4f4f5',
+          200: '#e4e4e7',
+          300: '#d4d4d8',
+          400: '#a1a1aa',
+          500: '#18181b', // Pure Zinc 900
+          600: '#09090b', // Pure Zinc 950
+          700: '#000000', // Pure Black
+          800: '#000000',
+          900: '#000000',
         },
         navy: {
           50: '#f0f4f8',

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,159 +6,164 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 98%; /* Soft Platinum */
+    --foreground: 240 10% 3.9%; /* Charcoal */
 
-    --card: 240 10% 5.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    /* Cyberpunk Purple Neon */
-    --primary: #a855f7;
+    /* Pure Minimalist Black */
+    --primary: #18181b;
     --primary-foreground: #ffffff;
 
-    /* Cyberpunk Cyan Neon */
-    --secondary: #06b6d4;
-    --secondary-foreground: #09090b;
+    /* Technical Crimson Accent */
+    --secondary: #ff3b30;
+    --secondary-foreground: #ffffff;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 10% 3.9%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 270 91.2% 59.8%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
   }
 }
 
-/* Cyberpunk Neon Global Dark Theme Overrides */
+/* Light Editorial Tech Global Styles */
 body {
-  background-color: #09090b !important;
-  color: #f4f4f5 !important;
+  background-color: #f9f9fb !important;
+  color: #18181b !important;
   font-family: 'Inter', sans-serif;
-  selection-background-color: rgba(168, 85, 247, 0.3);
+  -webkit-font-smoothing: antialiased;
+  selection-background-color: rgba(0, 0, 0, 0.1);
 }
 
 #root {
-  background-color: #09090b !important;
+  background-color: #f9f9fb !important;
   min-height: 100vh;
 }
 
-/* Force dark card backgrounds on all bright-white layout parts */
+/* Custom fonts for headings */
+.font-editorial {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Overwrite backgrounds */
 .bg-white, .bg-card {
-  background-color: #121214 !important;
+  background-color: #ffffff !important;
 }
 
-/* Adjust light-gray background containers to carbon-dark */
-.bg-gray-50, .bg-gray-100, .bg-[#FAFAFA], .bg-[#F4F5F7], .bg-gray-50\/40, .bg-gray-50\/50, .bg-gray-50\/60 {
-  background-color: #09090b !important;
+.bg-gray-50, .bg-\[\#FAFAFA\], .bg-\[\#F4F5F7\], .bg-gray-50\/40, .bg-gray-50\/50, .bg-gray-50\/60 {
+  background-color: #f9f9fb !important;
 }
 
-/* Adjust text colors to high contrast white/gray */
-.text-gray-900, .text-gray-800, .text-secondary, .text-secondary\/80, .text-secondary\/90, .text-gray-750 {
-  color: #fafafa !important;
+/* Overwrite text colors to high contrast dark charcoal */
+.text-gray-900, .text-gray-800, .text-secondary {
+  color: #18181b !important;
 }
 
 .text-gray-700, .text-gray-600 {
-  color: #d4d4d8 !important;
+  color: #52525b !important; /* Zinc 600 */
 }
 
 .text-gray-500, .text-gray-400 {
-  color: #9ca3af !important;
+  color: #71717a !important; /* Zinc 500 */
 }
 
 /* Borders and Dividers */
 .border-gray-50, .border-gray-100, .border-gray-200, .border-gray-300, .border-border, .border-gray-100\/50 {
-  border-color: #27272a !important; /* Zinc 800 */
+  border-color: #e4e4e7 !important; /* Zinc 200 */
 }
 
 /* Inputs, Select, Textareas */
 input, select, textarea {
-  background-color: #09090b !important;
-  color: #fafafa !important;
-  border-color: #27272a !important;
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border-color: #e4e4e7 !important;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: #a855f7 !important;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4) !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Header & Footer Styling */
 header.bg-white, footer.bg-white {
-  background-color: #09090b !important;
-  border-bottom: 1px solid #27272a !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e4e4e7 !important;
 }
 
 footer {
-  background-color: #09090b !important;
-  border-top: 1px solid #27272a !important;
+  background-color: #ffffff !important;
+  border-top: 1px solid #e4e4e7 !important;
 }
 
-/* Special hover enhancements with glowing neon violet shadows */
+/* Special hover enhancements: Apple-like light shadows */
 .hover\:shadow-minimal-hover:hover, 
 .group:hover .group-hover\:shadow-minimal-hover,
 .hover\:shadow-lg:hover {
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.15) !important;
-  border-color: rgba(168, 85, 247, 0.3) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03) !important;
+  border-color: #d4d4d8 !important;
 }
 
-/* Antd Components Dark Mode overrides */
+/* Antd Components overrides for light editorial theme */
 .ant-modal-content {
-  background-color: #121214 !important;
-  color: #fafafa !important;
-  border: 1px solid #27272a !important;
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border: 1px solid #e4e4e7 !important;
 }
 .ant-modal-header {
-  background-color: #121214 !important;
-  border-bottom: 1px solid #27272a !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f4f4f5 !important;
 }
 .ant-modal-title {
-  color: #fafafa !important;
+  color: #18181b !important;
 }
 .ant-modal-close-icon {
-  color: #a1a1aa !important;
+  color: #71717a !important;
 }
 .ant-modal-close-icon:hover {
-  color: #a855f7 !important;
+  color: #000000 !important;
 }
 .ant-card {
-  background-color: #121214 !important;
-  border-color: #27272a !important;
-  color: #fafafa !important;
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
 }
 .ant-card-head {
-  border-bottom-color: #27272a !important;
-  color: #fafafa !important;
+  border-bottom-color: #e4e4e7 !important;
+  color: #18181b !important;
 }
 .ant-table {
-  background-color: #121214 !important;
-  color: #fafafa !important;
+  background-color: #ffffff !important;
+  color: #18181b !important;
 }
 .ant-table-thead > tr > th {
-  background-color: #18181b !important;
-  color: #fafafa !important;
-  border-bottom-color: #27272a !important;
+  background-color: #f4f4f5 !important;
+  color: #18181b !important;
+  border-bottom-color: #e4e4e7 !important;
 }
 .ant-table-tbody > tr > td {
-  border-bottom-color: #27272a !important;
+  border-bottom-color: #e4e4e7 !important;
 }
 .ant-table-row:hover > td {
-  background-color: #1c1c1f !important;
+  background-color: #fafafa !important;
 }
 .ant-pagination-item-active {
-  border-color: #a855f7 !important;
-  background-color: #121214 !important;
+  border-color: #000000 !important;
+  background-color: #ffffff !important;
 }
 .ant-pagination-item-active a {
-  color: #a855f7 !important;
+  color: #000000 !important;
 }

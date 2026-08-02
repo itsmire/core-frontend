@@ -66,8 +66,8 @@ export default function Header() {
 
   const { scrollY } = useScroll();
   const headerHeight = useTransform(scrollY, [0, 100], ['72px', '60px']);
-  const headerBg = useTransform(scrollY, [0, 100], ['rgba(255, 255, 255, 1)', 'rgba(255, 255, 255, 0.95)']);
-  const headerShadow = useTransform(scrollY, [0, 100], ['none', '0 4px 20px -2px rgba(0, 0, 0, 0.05)']);
+  const headerBg = useTransform(scrollY, [0, 100], ['rgba(255, 255, 255, 1)', 'rgba(255, 255, 255, 0.98)']);
+  const headerShadow = useTransform(scrollY, [0, 100], ['none', '0 4px 20px -2px rgba(0, 0, 0, 0.02)']);
 
   const handleLogout = () => {
     logout();
@@ -103,7 +103,7 @@ export default function Header() {
             <Menu className="h-5 w-5" />
           </button>
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tight text-secondary">CORE</span>
+            <span className="text-xl font-mono tracking-[0.3em] font-black text-black uppercase">C O R E</span>
           </Link>
         </div>
 
