@@ -215,7 +215,7 @@ function ReturnLogisticsModal({ orderId, onClose }: { orderId: string; onClose: 
       toast.error('Vui lòng nhập hãng vận chuyển và mã vận đơn');
       return;
     }
-    mutate({ id: orderId, payload: { shippingMethod: method, carrier: method === 'SELF_ARRANGE' ? carrier : 'ZORA Express', trackingCode: method === 'SELF_ARRANGE' ? trackingCode : '' } }, {
+    mutate({ id: orderId, payload: { shippingMethod: method, carrier: method === 'SELF_ARRANGE' ? carrier : 'CORE Express', trackingCode: method === 'SELF_ARRANGE' ? trackingCode : '' } }, {
       onSuccess: () => {
         toast.success('Đã xác nhận phương thức trả hàng');
         onClose();
@@ -1067,7 +1067,7 @@ export default function OrderDetailPage() {
                       <span className="text-sm font-semibold text-gray-900">
                         {order.paymentMethod?.toUpperCase() === 'STRIPE' ? 'Thẻ tín dụng (Stripe)' : 
                          order.paymentMethod?.toUpperCase() === 'MOMO' ? 'Ví điện tử MoMo' : 
-                         'Số dư TK ZORA'}
+                         'Số dư TK CORE'}
                       </span>
                     </div>
                   </div>

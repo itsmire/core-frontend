@@ -55,15 +55,15 @@ export default function RegisterPage() {
   return (
     <div
       className="relative flex min-h-screen w-full items-center justify-end overflow-hidden bg-cover bg-center px-6 md:px-16 lg:px-24"
-      style={{ backgroundImage: `url(${bannerBg})`, backgroundSize: '85%' }}
+      style={{ backgroundImage: `url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600)`, backgroundSize: 'cover' }}
     >
       {/* Overlay nhẹ */}
-      <div className="absolute inset-0 bg-white/10" />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Form card */}
-      <div className="relative z-10 w-full max-w-md rounded-2xl border border-white/30 bg-white/70 p-8 shadow-2xl backdrop-blur-md">
+      <div className="relative z-10 w-full max-w-md rounded-2xl border border-white/10 bg-white/95 p-8 shadow-2xl">
         <h2 className="mb-1 text-center text-2xl font-bold text-gray-900">Đăng Ký</h2>
-        <p className="mb-6 text-center text-sm text-gray-500">Tạo tài khoản ZORA của bạn</p>
+        <p className="mb-6 text-center text-sm text-gray-500">Tạo tài khoản CORE của bạn</p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           {/* Full name */}

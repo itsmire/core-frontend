@@ -6,8 +6,8 @@ import { useAiChat } from '../hooks/useAiChat';
 import { useAuthStore } from '@/stores/authStore';
 import { AiConversation } from '../services/aiService';
 
-const PRIMARY = '#FF6B35';
-const NAVY = '#0A2540';
+const PRIMARY = '#6366f1';
+const NAVY = '#0f172a';
 
 const USER_QUICK_PROMPTS = ['Chính sách đổi trả?', 'Theo dõi đơn hàng ở đâu?', 'Thời gian giao hàng?'];
 const SELLER_QUICK_PROMPTS = ['Thống kê doanh thu shop?', 'Đơn hàng cần xác nhận?', 'Chính sách Seller?'];
@@ -132,7 +132,7 @@ function ChatPanel({
           <Bot size={18} color="#fff" />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-white font-semibold text-sm leading-tight">ZORA AI</p>
+          <p className="text-white font-semibold text-sm leading-tight">CORE AI</p>
           <div className="flex items-center gap-1 mt-0.5">
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
             <span className="text-white/60 text-xs">Đang hoạt động</span>
@@ -159,7 +159,7 @@ function ChatPanel({
             <div className="w-14 h-14 rounded-full flex items-center justify-center mb-1" style={{ background: `${PRIMARY}20` }}>
               <Bot size={28} style={{ color: PRIMARY }} />
             </div>
-            <p className="font-semibold text-gray-700 text-sm">Xin chào! Tôi là ZORA AI</p>
+            <p className="font-semibold text-gray-700 text-sm">Xin chào! Tôi là CORE AI</p>
             <p className="text-gray-400 text-xs leading-relaxed">{subtitle}</p>
             <div className="flex flex-col gap-2 mt-3 w-full">
               {quickPrompts.map((q) => (
@@ -362,7 +362,7 @@ export default function AiChatWidget() {
         whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.93 }}
         className="w-14 h-14 rounded-full shadow-lg flex items-center justify-center"
         style={{ background: PRIMARY }}
-        title="Chat với ZORA AI"
+        title="Chat với CORE AI"
       >
         <AnimatePresence mode="wait">
           {open

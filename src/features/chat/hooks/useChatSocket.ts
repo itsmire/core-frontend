@@ -112,7 +112,7 @@ export function useChatSocket(conversationId: string | null, callHandlers?: Call
     const handleNewNotification = (data: ChatNewNotification) => {
       // Chỉ coi là "đang xem" khi vừa ở /chat VỪA conv khớp activeConversationId
       // VỪA tab đang focus (không hidden). Nếu user chuyển sang tab YouTube
-      // hoặc minimize window, tab ZORA ẩn → cần coi là "không xem" để increment
+      // hoặc minimize window, tab CORE ẩn → cần coi là "không xem" để increment
       // unread badge và hiện browser notification.
       const isOnChatPage = typeof window !== 'undefined' && window.location.pathname === '/chat';
       const isTabFocused = typeof document !== 'undefined' && !document.hidden && document.hasFocus();

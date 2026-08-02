@@ -9,11 +9,11 @@ import heroBannerImg from '@/assets/hero-banner.jpg';
 const AUTO_SLIDE_MS = 5000;
 
 const DEFAULT_BANNER = {
-  badge: 'Chiến dịch Mega Sale',
-  title: 'Thiết bị gia dụng',
-  titleAccent: 'thế hệ mới',
-  description: 'Tối ưu hoá không gian sống với bộ sưu tập Home Appliances giảm đến 50%. Mua ngay hôm nay!',
-  ctaLabel: 'Mua sắm ngay',
+  badge: 'Thế giới công nghệ Core',
+  title: 'Thiết bị công nghệ',
+  titleAccent: 'đỉnh cao',
+  description: 'Trải nghiệm kỷ nguyên số với các dòng laptop, điện thoại thông minh và phụ kiện công nghệ chính hãng. Nhập mã CORETECH giảm ngay 10%!',
+  ctaLabel: 'Khám phá ngay',
   ctaLink: '/products',
 };
 
@@ -40,8 +40,8 @@ export default function HeroCarousel() {
       <section className="relative mt-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="relative overflow-hidden rounded-2xl bg-white min-h-[400px] flex items-center shadow-sm border border-gray-100">
           <div
-            className="absolute inset-0 bg-cover bg-[center_top_-4rem] opacity-30 mix-blend-multiply"
-            style={{ backgroundImage: `url(${heroBannerImg})` }}
+            className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-multiply"
+            style={{ backgroundImage: `url(https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=1600)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
           <div className="relative w-full px-8 md:px-16">

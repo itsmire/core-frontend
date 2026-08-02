@@ -79,11 +79,11 @@ export default function AiChatPanel() {
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100">
         <div className="flex items-center gap-3">
-          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center shadow-sm shadow-orange-200">
+          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center shadow-sm shadow-indigo-200">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div>
-            <p className="font-semibold text-gray-900">ZORA AI</p>
+            <p className="font-semibold text-gray-900">CORE AI</p>
             <p className="text-xs text-gray-500">Trợ lý AI luôn sẵn sàng</p>
           </div>
         </div>
@@ -109,10 +109,10 @@ export default function AiChatPanel() {
       <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3 bg-gray-50/40">
         {messages.length === 0 && !loading && (
           <div className="flex flex-col items-center justify-center h-full text-center px-6">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center mb-4 shadow-lg shadow-orange-200">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center mb-4 shadow-lg shadow-indigo-200">
               <Sparkles className="w-8 h-8 text-white" />
             </div>
-            <p className="font-semibold text-gray-900">Xin chào! Tôi là ZORA AI</p>
+            <p className="font-semibold text-gray-900">Xin chào! Tôi là CORE AI</p>
             <p className="text-sm text-gray-500 mt-1 max-w-sm">
               {isSeller
                 ? 'Hỏi tôi về thống kê shop, đơn hàng, chính sách sàn...'

@@ -712,15 +712,15 @@ export default function ProfilePage() {
         className="rounded-2xl"
       >
         <div className="flex flex-col items-center justify-center py-6">
-          <div className="w-16 h-16 rounded-full border-2 border-orange-100 bg-orange-50 mb-3 flex items-center justify-center overflow-hidden">
+          <div className="w-16 h-16 rounded-full border-2 border-indigo-100 bg-indigo-50 mb-3 flex items-center justify-center overflow-hidden">
              {avatarUrl ? (
                 <img src={avatarUrl} alt={displayName} className="w-full h-full object-cover" />
              ) : (
-                <User className="w-8 h-8 text-orange-400" />
+                <User className="w-8 h-8 text-primary" />
              )}
           </div>
           <h3 className="text-lg font-bold text-gray-900 mb-1">{displayName}</h3>
-          <p className="text-sm text-gray-500 mb-6">Quét mã để kết bạn trên ZORA</p>
+          <p className="text-sm text-gray-500 mb-6">Quét mã để kết bạn trên CORE</p>
           
           <div className="p-3 bg-white rounded-xl shadow-sm border border-gray-100">
              <QRCode

@@ -79,7 +79,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-5">
             <h4 className="text-sm font-semibold uppercase tracking-widest text-white/90">Về Chúng Tôi</h4>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><Link to="#" className="hover:text-primary transition-colors">Giới thiệu ZORA</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">Giới thiệu CORE</Link></li>
               <li><Link to="/products" className="hover:text-primary transition-colors">Cửa hàng</Link></li>
               <li><Link to="#" className="hover:text-primary transition-colors">Tuyển dụng</Link></li>
               <li><Link to="#" className="hover:text-primary transition-colors">Tin tức & Blog</Link></li>
@@ -104,17 +104,17 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-white font-medium">1800 ZORA <span className="text-white/40 text-xs">(miễn phí)</span></p>
+                  <p className="text-white font-medium">1800 CORE <span className="text-white/40 text-xs">(miễn phí)</span></p>
                   <p className="text-xs text-white/40">Thứ Hai – Chủ Nhật, 08:00 – 22:00</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <a href="mailto:hi@zora.com" className="hover:text-primary transition-colors">hi@zora.com</a>
+                <a href="mailto:hi@core.com" className="hover:text-primary transition-colors">hi@core.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span>Tầng 12, Toà ZORA, 88 Láng Hạ, Đống Đa, Hà Nội</span>
+                <span>Tầng 5, Toà nhà CORE, 12 Nguyễn Văn Bảo, Gò Vấp, TP. Hồ Chí Minh</span>
               </li>
             </ul>
 

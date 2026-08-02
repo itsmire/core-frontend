@@ -87,8 +87,8 @@ function buildInitialForm(
   const codAmount = order.paymentMethod === 'COD' ? String(Math.round(order.totalPrice)) : '0';
 
   return {
-    provider: order.shippingProvider || 'ZORA Express',
-    senderShopName: sellerApplication?.shopName || authName || 'ZORA Seller',
+    provider: order.shippingProvider || 'CORE Express',
+    senderShopName: sellerApplication?.shopName || authName || 'CORE Seller',
     senderName: authName || sellerApplication?.fullName || '',
     senderPhone: authPhone || defaultAddress?.phone || '',
     senderAddress,
@@ -228,7 +228,7 @@ function ShippingLabelPreview({
       <div style={{ borderBottom: '1px solid #111827', padding: '10px 12px 8px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
           <div>
-            <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 0.8 }}>ZORA EXPRESS</div>
+            <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 0.8 }}>CORE EXPRESS</div>
             <div style={{ fontSize: 9, color: '#4b5563', marginTop: 2 }}>{form.provider}</div>
           </div>
           <div style={{ minWidth: 132, flex: 1 }}>

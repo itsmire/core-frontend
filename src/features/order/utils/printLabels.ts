@@ -30,7 +30,7 @@ function buildLabelHtml(order: Order): string {
   return `
 <div class="label">
   <div class="label-header">
-    <div class="brand">ZORA EXPRESS</div>
+    <div class="brand">CORE EXPRESS</div>
     <div class="tracking">${tracking}</div>
   </div>
   <div class="label-body">

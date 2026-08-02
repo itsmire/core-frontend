@@ -98,7 +98,7 @@ export default function QRJoinPage() {
                   <Users size={16} className="mr-1.5" />
                   <span>{groupInfo.memberCount || 1} thành viên</span>
                 </div>
-                <p className="text-gray-600 mb-8">Bạn được mời tham gia nhóm chat này trên ZORA.</p>
+                <p className="text-gray-600 mb-8">Bạn được mời tham gia nhóm chat này trên CORE.</p>
               </>
             ) : (
                <>

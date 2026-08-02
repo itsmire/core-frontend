@@ -5,7 +5,7 @@ import { useGroupStore } from '@/stores/groupStore';
 const BASE_TITLE = 'CORE - E-commerce Platform';
 
 /**
- * Cập nhật tab title kiểu "(N) ZORA..." khi có tin nhắn chưa đọc, giống YouTube/Gmail.
+ * Cập nhật tab title kiểu "(N) CORE..." khi có tin nhắn chưa đọc, giống YouTube/Gmail.
  * Reset về title gốc khi count = 0.
  */
 export function useUnreadTitle() {

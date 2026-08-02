@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Truck, Wallet, Flame, ShieldCheck, Ticket, Gift, Clock, CreditCard, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Cpu, ShieldCheck, Zap, RefreshCw, CreditCard, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useProducts } from '@/features/product/hooks/useProducts';
 import { useCategories } from '@/features/product/hooks/useCategories';
 import ProductGrid from '@/features/product/components/ProductGrid';
@@ -8,14 +8,14 @@ import { ProductGridSkeleton } from '@/features/product/components/ProductSkelet
 import HeroCarousel from '@/features/ads/components/HeroCarousel';
 
 const UTILITIES = [
-  { icon: Ticket, label: 'Voucher Giảm 50%', color: 'text-orange-500', bg: 'bg-orange-100', path: '/campaigns/voucher' },
-  { icon: Wallet, label: 'Thanh Toán Onl', color: 'text-blue-500', bg: 'bg-blue-100', path: '/campaigns/thanh-toan' },
-  { icon: Flame, label: 'Bắt Trend Giá Sốc', color: 'text-red-500', bg: 'bg-red-100', path: '/campaigns/gia-soc' },
-  { icon: ShieldCheck, label: 'Hàng Chính Hãng', color: 'text-indigo-500', bg: 'bg-indigo-100', path: '/campaigns/chinh-hang' },
-  { icon: Clock, label: 'Giao Hàng Siêu Tốc', color: 'text-yellow-500', bg: 'bg-yellow-100', path: '/campaigns/sieu-toc' },
+  { icon: Cpu, label: 'Siêu Phẩm Mới', color: 'text-indigo-600', bg: 'bg-indigo-50', path: '/products' },
+  { icon: ShieldCheck, label: 'Bảo Hành 2 Năm', color: 'text-emerald-600', bg: 'bg-emerald-50', path: '/products' },
+  { icon: Zap, label: 'Giao Hỏa Tốc 2H', color: 'text-amber-600', bg: 'bg-amber-50', path: '/products' },
+  { icon: RefreshCw, label: 'Thu Cũ Đổi Mới', color: 'text-rose-600', bg: 'bg-rose-50', path: '/products' },
+  { icon: CreditCard, label: 'Trả Góp 0% Lãi', color: 'text-sky-600', bg: 'bg-sky-50', path: '/products' },
 ];
 
-const CATS_PER_PAGE = 12;
+const CATS_PER_PAGE = 10;
 
 export default function HomePage() {
   const { data: newProducts, isLoading } = useProducts({ size: 8, sort: 'newest' });
@@ -61,28 +61,28 @@ export default function HomePage() {
               </button>
 
               {/* Grid */}
-              <div className="flex-1 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div className="flex items-center p-5 border-b border-gray-100">
-                  <h2 className="text-lg font-bold text-secondary uppercase tracking-tight">Danh mục phổ biến</h2>
+              <div className="flex-1 bg-transparent overflow-hidden">
+                <div className="flex items-center pb-5 px-1">
+                  <h2 className="text-xl font-extrabold text-secondary uppercase tracking-wider">Danh mục công nghệ</h2>
                   {totalCatPages > 1 && (
-                    <span className="ml-auto text-xs text-gray-400">{catPage + 1} / {totalCatPages}</span>
+                    <span className="ml-auto text-xs text-gray-400 font-semibold">{catPage + 1} / {totalCatPages}</span>
                   )}
                 </div>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 border-l border-t border-gray-100">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 p-1">
                   {visibleCats.map((cat) => (
                     <Link
                       key={cat.id}
                       to={`/products?categoryId=${cat.id}`}
-                      className="group relative flex flex-col items-center justify-center p-4 h-36 border-r border-b border-gray-100 bg-white hover:z-10 hover:shadow-[0_0_20px_rgba(0,0,0,0.08)] transition-all duration-300"
+                      className="group relative flex flex-col items-center justify-center p-5 h-40 rounded-2xl border border-gray-100 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_15px_40px_rgba(99,102,241,0.06)] hover:border-primary/20 transition-all duration-300 hover:-translate-y-1.5"
                     >
-                      <div className="h-16 w-16 mb-3 rounded-full overflow-hidden flex items-center justify-center bg-primary/10 group-hover:-translate-y-1 transition-transform duration-300">
+                      <div className="h-16 w-16 mb-4 rounded-xl overflow-hidden flex items-center justify-center bg-primary/5 group-hover:scale-105 transition-transform duration-300">
                         {cat.imageUrl ? (
                           <img src={cat.imageUrl} alt={cat.name} className="h-full w-full object-cover" />
                         ) : (
                           <Tag className="h-7 w-7 text-primary" />
                         )}
                       </div>
-                      <span className="text-xs text-center font-medium text-secondary/80 group-hover:text-primary transition-colors line-clamp-2 px-1">
+                      <span className="text-xs text-center font-bold text-secondary/80 group-hover:text-primary transition-colors line-clamp-2 px-1 tracking-tight">
                         {cat.name}
                       </span>
                     </Link>

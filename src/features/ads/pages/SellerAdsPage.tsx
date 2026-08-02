@@ -112,7 +112,7 @@ export default function SellerAdsPage() {
               <Megaphone className="w-6 h-6 text-orange-500" /> Chiến dịch quảng cáo
             </h1>
             <p className="text-sm text-gray-500 mt-1">
-              Đăng ký banner hiển thị trên trang chủ ZORA. Admin sẽ duyệt trong 24h.
+              Đăng ký banner hiển thị trên trang chủ CORE. Admin sẽ duyệt trong 24h.
             </p>
           </div>
           {!showForm && (
@@ -336,7 +336,7 @@ export default function SellerAdsPage() {
                 <h3 className="font-bold text-gray-900 flex items-center gap-2">
                   <Eye className="w-5 h-5 text-orange-500" /> Xem trước banner
                 </h3>
-                <p className="text-xs text-gray-500 mt-0.5">Đây là cách banner sẽ hiển thị trên trang chủ ZORA</p>
+                <p className="text-xs text-gray-500 mt-0.5">Đây là cách banner sẽ hiển thị trên trang chủ CORE</p>
               </div>
               <button onClick={() => setShowPreview(false)} className="p-1 hover:bg-gray-100 rounded">
                 <X className="w-5 h-5 text-gray-500" />

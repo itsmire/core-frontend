@@ -57,15 +57,15 @@ export default function UserWalletPage() {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-        <Wallet className="w-7 h-7 text-orange-500" />
-        Ví ZORA của tôi
+        <Wallet className="w-7 h-7 text-primary" />
+        Ví CORE của tôi
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column: Balance Card & Withdraw Form */}
         <div className="lg:col-span-1 flex flex-col gap-6">
           {/* Balance Card */}
-          <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-6 text-white shadow-lg shadow-orange-200">
+          <div className="bg-gradient-to-br from-primary to-indigo-600 rounded-2xl p-6 text-white shadow-lg shadow-indigo-200">
             <div className="flex items-center gap-2 mb-3">
               <h2 className="text-sm font-medium opacity-90">Số dư khả dụng</h2>
               <div className="relative group">

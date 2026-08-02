@@ -116,7 +116,7 @@ function TransactionItem({ txn }: { txn: any }) {
             <span>{formatVND(grossAmount)}</span>
           </div>
           <div className="flex justify-between text-gray-600 mb-2 border-b border-orange-100 pb-2">
-            <span>Phí nền tảng ZORA (5%):</span>
+            <span>Phí nền tảng CORE (5%):</span>
             <span className="text-red-500 font-medium">-{formatVND(platformFee)}</span>
           </div>
           <div className="flex justify-between font-bold text-gray-900">

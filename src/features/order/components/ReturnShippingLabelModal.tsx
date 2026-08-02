@@ -85,15 +85,15 @@ export default function ReturnShippingLabelModal({ order, onClose }: ReturnShipp
   const { data: shop } = useShop(sellerId || undefined);
 
   const trackingNumber = returnShipment?.trackingCode || 'CHƯA CÓ MÃ';
-  const provider = returnShipment?.carrier || 'ZORA Express';
+  const provider = returnShipment?.carrier || 'CORE Express';
   
   const senderName = user?.fullName || order.shippingAddress?.fullName || 'Người Mua';
   const senderPhone = user?.phone || order.shippingAddress?.phoneNumber || '';
   const senderAddress = order.shippingAddress?.fullAddress || [order.shippingAddress?.street, order.shippingAddress?.ward, order.shippingAddress?.district, order.shippingAddress?.province].filter(Boolean).join(', ');
 
   const receiverName = shop?.shopName ? `Shop ${shop.shopName}` : 'Người Bán (Hoàn hàng)';
-  const receiverPhone = 'Bảo mật bởi ZORA';
-  const receiverAddress = 'Giao lại cho bưu tá ZORA (Địa chỉ bảo mật)';
+  const receiverPhone = 'Bảo mật bởi CORE';
+  const receiverAddress = 'Giao lại cho bưu tá CORE (Địa chỉ bảo mật)';
 
   const itemSummary = order.items?.filter(i => refundItems.some(ri => ri.orderItemId === i.id)).map(i => `${i.productName} x${refundItems.find(ri => ri.orderItemId === i.id)?.quantity}`).join(', ') || 'Hàng hoàn trả';
   const orderCode = order.id.slice(0, 8).toUpperCase();
@@ -154,7 +154,7 @@ export default function ReturnShippingLabelModal({ order, onClose }: ReturnShipp
             <div style={{ borderBottom: '1px solid #111827', padding: '10px 12px 8px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
                 <div>
-                  <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 0.8 }}>TRẢ HÀNG ZORA</div>
+                  <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 0.8 }}>TRẢ HÀNG CORE</div>
                   <div style={{ fontSize: 9, color: '#4b5563', marginTop: 2 }}>{provider}</div>
                 </div>
                 <div style={{ minWidth: 132, flex: 1 }}>

@@ -88,7 +88,7 @@ const AddCreditCardPage: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-emerald-800 mb-1">Thông tin thẻ của bạn được bảo vệ.</p>
                   <p className="text-xs text-emerald-700/80 leading-relaxed">
-                    Chúng tôi hợp tác với ZoraPay để đảm bảo thông tin thẻ của bạn được bảo mật và an toàn. Zora sẽ không có quyền truy cập vào thông tin thẻ của bạn.
+                    Chúng tôi hợp tác với CorePay để đảm bảo thông tin thẻ của bạn được bảo mật và an toàn. Core sẽ không có quyền truy cập vào thông tin thẻ của bạn.
                   </p>
                 </div>
               </div>

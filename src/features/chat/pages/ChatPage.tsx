@@ -747,11 +747,11 @@ export default function ChatPage() {
               aiActive ? 'bg-orange-50' : 'hover:bg-orange-50/50'
             }`}
           >
-            <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-200">
+            <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center shrink-0 shadow-sm shadow-indigo-200">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className={`font-semibold text-sm ${aiActive ? 'text-orange-600' : 'text-gray-900'}`}>ZORA AI</p>
+              <p className={`font-semibold text-sm ${aiActive ? 'text-orange-600' : 'text-gray-900'}`}>CORE AI</p>
               <p className="text-xs text-gray-500 truncate">Trợ lý AI — hỏi gì cũng được</p>
             </div>
           </button>
