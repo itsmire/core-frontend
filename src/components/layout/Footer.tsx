@@ -28,7 +28,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12">
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-4 space-y-6">
-            <Link to="/" className="inline-block">
+            <Link to="/" className="flex items-center gap-2.5">
+              <img src="/images/logo.png" alt="CORE Logo" className="h-8 w-8 rounded object-cover" />
               <span className="text-xl font-mono tracking-[0.3em] font-black text-black uppercase">C O R E</span>
             </Link>
             <p className="text-xs text-zinc-500 leading-relaxed max-w-sm">

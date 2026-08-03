@@ -102,7 +102,8 @@ export default function Header() {
           <button className="md:hidden p-2 text-secondary hover:text-primary transition-colors">
             <Menu className="h-5 w-5" />
           </button>
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2.5">
+            <img src="/images/logo.png" alt="CORE Logo" className="h-8 w-8 rounded object-cover" />
             <span className="text-xl font-mono tracking-[0.3em] font-black text-black uppercase">C O R E</span>
           </Link>
         </div>

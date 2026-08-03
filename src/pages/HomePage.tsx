@@ -35,6 +35,15 @@ export default function HomePage() {
   return (
     <div className="flex flex-col pb-24 bg-[#f9f9fb]">
       
+      {/* 0. Premium Full-Width Banner */}
+      <section className="relative w-full border-b border-gray-200 bg-black overflow-hidden aspect-[2.4/1] sm:aspect-[2/1] aspect-[16/9]">
+        <img
+          src="/images/hero-banner.png"
+          alt="CORE Technology Hero Banner"
+          className="w-full h-full object-cover object-center"
+        />
+      </section>
+
       {/* 1. Split-Screen Hero Section */}
       <section className="relative bg-white border-b border-gray-200 overflow-hidden py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

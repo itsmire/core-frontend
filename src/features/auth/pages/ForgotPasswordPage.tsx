@@ -127,7 +127,7 @@ export default function ForgotPasswordPage() {
   return (
     <div
       className="relative flex min-h-screen w-full items-center justify-end overflow-hidden bg-cover bg-center px-6 md:px-16 lg:px-24"
-      style={{ backgroundImage: `url(${bannerBg})`, backgroundSize: '85%' }}
+      style={{ backgroundImage: `url(/images/login-bg.png)`, backgroundSize: 'cover' }}
     >
       <div className="absolute inset-0 bg-white/10" />
 

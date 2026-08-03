@@ -65,7 +65,7 @@ export default function LoginPage() {
   return (
     <div
       className="relative flex min-h-screen w-full items-center justify-end overflow-hidden bg-cover bg-center px-6 md:px-16 lg:px-24"
-      style={{ backgroundImage: `url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600)`, backgroundSize: 'cover' }}
+      style={{ backgroundImage: `url(/images/login-bg.png)`, backgroundSize: 'cover' }}
     >
       {/* Overlay nhẹ để chữ banner dễ đọc */}
       <div className="absolute inset-0 bg-black/40" />
