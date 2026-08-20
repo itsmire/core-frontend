@@ -234,12 +234,54 @@ export default function mockAdapter(config: AxiosRequestConfig): Promise<AxiosRe
       }
 
       if (url.endsWith('/api/auth/register')) {
+        const demoOtp = '123456';
+        localStorage.setItem('mock_otp_' + data.email, demoOtp);
         return resolve({
           status: 200,
           statusText: 'OK',
           headers: {},
           config,
-          data: { email: data.email, message: 'OTP_SENT_TO_EMAIL' }
+          data: { email: data.email, message: 'OTP_SENT_TO_EMAIL', demoOtp }
+        });
+      }
+
+      if (url.includes('/api/auth/verify-email')) {
+        return resolve({
+          status: 200,
+          statusText: 'OK',
+          headers: {},
+          config,
+          data: 'EMAIL_VERIFIED_SUCCESS'
+        });
+      }
+
+      if (url.includes('/api/auth/resend-verification')) {
+        return resolve({
+          status: 200,
+          statusText: 'OK',
+          headers: {},
+          config,
+          data: 'VERIFICATION_RESENT'
+        });
+      }
+
+      if (url.endsWith('/api/auth/forgot-password')) {
+        return resolve({
+          status: 200,
+          statusText: 'OK',
+          headers: {},
+          config,
+          data: 'OTP_SENT'
+        });
+      }
+
+      if (url.endsWith('/api/auth/reset-password')) {
+        return resolve({
+          status: 200,
+          statusText: 'OK',
+          headers: {},
+          config,
+          data: 'PASSWORD_RESET_SUCCESS'
         });
       }
 
