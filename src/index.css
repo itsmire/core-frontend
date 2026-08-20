@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Soft Platinum */
+    --foreground: 240 10% 3.9%; /* Charcoal */
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Pure Minimalist Black */
+    --primary: #18181b;
+    --primary-foreground: #ffffff;
+
+    /* Technical Crimson Accent */
+    --secondary: #ff3b30;
+    --secondary-foreground: #ffffff;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+/* Light Editorial Tech Global Styles */
+body {
+  background-color: #f9f9fb !important;
+  color: #18181b !important;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  selection-background-color: rgba(0, 0, 0, 0.1);
+}
+
+#root {
+  background-color: #f9f9fb !important;
+  min-height: 100vh;
+}
+
+/* Custom fonts for headings */
+.font-editorial {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Overwrite backgrounds */
+.bg-white, .bg-card {
+  background-color: #ffffff !important;
+}
+
+.bg-gray-50, .bg-\[\#FAFAFA\], .bg-\[\#F4F5F7\], .bg-gray-50\/40, .bg-gray-50\/50, .bg-gray-50\/60 {
+  background-color: #f9f9fb !important;
+}
+
+/* Overwrite text colors to high contrast dark charcoal */
+.text-gray-900, .text-gray-800, .text-secondary {
+  color: #18181b !important;
+}
+
+.text-gray-700, .text-gray-600 {
+  color: #52525b !important; /* Zinc 600 */
+}
+
+.text-gray-500, .text-gray-400 {
+  color: #71717a !important; /* Zinc 500 */
+}
+
+/* Borders and Dividers */
+.border-gray-50, .border-gray-100, .border-gray-200, .border-gray-300, .border-border, .border-gray-100\/50 {
+  border-color: #e4e4e7 !important; /* Zinc 200 */
+}
+
+/* Inputs, Select, Textareas */
+input, select, textarea {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border-color: #e4e4e7 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Header & Footer Styling */
+header.bg-white, footer.bg-white {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e4e4e7 !important;
+}
+
+footer {
+  background-color: #ffffff !important;
+  border-top: 1px solid #e4e4e7 !important;
+}
+
+/* Special hover enhancements: Apple-like light shadows */
+.hover\:shadow-minimal-hover:hover, 
+.group:hover .group-hover\:shadow-minimal-hover,
+.hover\:shadow-lg:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03) !important;
+  border-color: #d4d4d8 !important;
+}
+
+/* Antd Components overrides for light editorial theme */
+.ant-modal-content {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border: 1px solid #e4e4e7 !important;
+}
+.ant-modal-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f4f4f5 !important;
+}
+.ant-modal-title {
+  color: #18181b !important;
+}
+.ant-modal-close-icon {
+  color: #71717a !important;
+}
+.ant-modal-close-icon:hover {
+  color: #000000 !important;
+}
+.ant-card {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+.ant-card-head {
+  border-bottom-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+.ant-table {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+}
+.ant-table-thead > tr > th {
+  background-color: #f4f4f5 !important;
+  color: #18181b !important;
+  border-bottom-color: #e4e4e7 !important;
+}
+.ant-table-tbody > tr > td {
+  border-bottom-color: #e4e4e7 !important;
+}
+.ant-table-row:hover > td {
+  background-color: #fafafa !important;
+}
+.ant-pagination-item-active {
+  border-color: #000000 !important;
+  background-color: #ffffff !important;
+}
+.ant-pagination-item-active a {
+  color: #000000 !important;
+}
