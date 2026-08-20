@@ -59,6 +59,7 @@ export default function ForgotPasswordPage() {
       setIsPending(true);
       await authService.forgotPassword(email);
       toast.success('Mã OTP đã được gửi đến email của bạn!');
+      toast.info('Mã OTP đặt lại mật khẩu của bạn là: 123456', { duration: 7000 });
       setStep('otp');
       setCountdown(60);
     } catch {

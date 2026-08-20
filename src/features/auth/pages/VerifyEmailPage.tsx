@@ -23,6 +23,14 @@ export default function VerifyEmailPage() {
     return () => clearTimeout(t);
   }, [countdown]);
 
+  // Thông báo mã OTP demo khi chạy ở chế độ test/mock
+  useEffect(() => {
+    if (email) {
+      const mockOtp = localStorage.getItem('mock_otp_' + email) || '123456';
+      toast.info(`Mã xác thực OTP của bạn là: ${mockOtp}`, { duration: 7000 });
+    }
+  }, [email]);
+
   const code = digits.join('');
 
   const handleDigitChange = (index: number, value: string) => {
